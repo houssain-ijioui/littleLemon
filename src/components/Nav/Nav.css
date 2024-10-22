@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: cadetblue;
+}
+
+nav .links {
+    display: flex;
+    flex-direction: row;
+}
+
+nav .links li {
+    list-style-type: none;
+}
+
+nav .link a {
+    text-decoration: none;
+}
