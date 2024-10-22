@@ -6,7 +6,7 @@ import './Nav.css';
 const Nav = () => {
   return (
     <nav>
-        <img style={{width: 100}} src={logo}  alt="" />
+        <img src={logo}  alt="Little Lemon Logo" />
         <ul className='links'>
           <li className='link'><a href="/">Home</a></li>
           <li className='link'><a href="/policy">Policy</a></li>
