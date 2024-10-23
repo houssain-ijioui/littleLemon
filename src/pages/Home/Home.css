@@ -1,0 +1,31 @@
+header {
+    padding: 0 60px;
+}
+
+main {
+    padding: 0 60px;
+}
+
+#title {
+    color: #5c8394;
+}
+
+#ft-head {
+    color: #4A628A;
+}
+
+#sd-head {
+    color: #DE8F5F;
+}
+
+p {
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.cta-button {
+    color: #0091AE;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 19px;
+}
