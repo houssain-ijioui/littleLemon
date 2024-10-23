@@ -2,7 +2,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: cadetblue;
+    background-color: #18181B;
     padding: 15px 90px;
 }
 
@@ -26,6 +26,5 @@ nav .links li {
 
 nav .link a {
     text-decoration: none;
-    font-weight: 600;
     color: #fff;
 }

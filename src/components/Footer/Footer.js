@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './Footer.css';
+
+
 
 const Footer = () => {
   return (
-    <footer>Little Lemon All Rights Reserved 2024</footer>
+    <footer>&copy; Little Lemon All Rights Reserved 2024</footer>
   )
 }
 
