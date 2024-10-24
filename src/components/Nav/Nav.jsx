@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../Little-Lemon-Logo-circle-white.png"
+import logo from "../../assets/Little-Lemon-Logo-circle-white.png"
 import './Nav.css';
 import { Link } from 'react-router-dom';
 

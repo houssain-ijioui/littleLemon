@@ -14,6 +14,10 @@ h2 {
     color: #4A628A;
 }
 
+h3 {
+    color: #3FA2F6;
+}
+
 #sd-head {
     color: #DE8F5F;
 }
@@ -22,3 +26,9 @@ p {
     font-weight: 600;
     line-height: 26px;
 }
+
+.specials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
