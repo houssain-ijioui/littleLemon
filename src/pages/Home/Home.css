@@ -6,11 +6,11 @@ main {
     padding: 0 60px;
 }
 
-#title {
+h1 {
     color: #5c8394;
 }
 
-#ft-head {
+h2 {
     color: #4A628A;
 }
 
@@ -28,4 +28,7 @@ p {
     text-decoration: none;
     font-weight: 700;
     font-size: 19px;
+    padding: 12px;
+    border: 1px solid #0091AE;
+    border-radius: 12px;
 }
