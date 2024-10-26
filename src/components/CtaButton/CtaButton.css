@@ -6,4 +6,14 @@
     padding: 12px;
     border: 1px solid #0091AE;
     border-radius: 12px;
+    transition: 
+        background-color 0.5s ease-in-out,
+        color 0.5s ease-in-out,
+        transform 0.5s ease-in-out;
+}
+
+
+.cta-button:hover {
+    background-color: #0091AE;
+    color: white;
 }

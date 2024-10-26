@@ -1,15 +1,14 @@
 import React from 'react';
 import './DishCard.css';
-import image from '../../assets/Lime.png'
 
 
-export default function DishCard() {
+export default function DishCard({ title, price, imageUrl }) {
   return (
     <article className='card'>
-        <img className='dish-image' src={image} alt="Title" />
+        <img className='dish-image' src={imageUrl} alt={title} />
         <div className='details'>
-          <h4>12$</h4>
-          <h5>Lasagne Napolitana</h5>
+          <h4>{price}$</h4>
+          <h5>{title}</h5>
         </div>
     </article>
   )
