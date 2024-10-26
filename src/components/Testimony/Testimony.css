@@ -1,0 +1,22 @@
+.testimony-card {
+    background-color: rgb(212, 209, 209);
+    padding: 16px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimony-card:hover {
+    transform: scale(1.08);
+}
+
+.testimony-card .opinion {
+    font-size: 13px;
+}
+
+.testimony-card .name {
+    font-size: 12px;
+}
+
+.testimony-card .date {
+    font-size: 11px;
+}

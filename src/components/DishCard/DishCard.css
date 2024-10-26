@@ -1,4 +1,4 @@
-article.card {
+article.dish-card {
     width: 350px;
     height: 300px;
     padding: 8px 0px 22px 0;
@@ -22,7 +22,7 @@ article.card {
 }
 
 
-.card h4 {
+.dish-card h4 {
     color: #2A629A;
     font-size: 18px;
     margin-right: 20px;
@@ -34,7 +34,7 @@ article.card {
     align-items: center;
 }
 
-.card h5 {
+.dish-card h5 {
     color: #4A628A;
     font-size: medium;
 }

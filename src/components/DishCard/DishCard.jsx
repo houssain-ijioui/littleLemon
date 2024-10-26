@@ -4,7 +4,7 @@ import './DishCard.css';
 
 export default function DishCard({ title, price, imageUrl }) {
   return (
-    <article className='card'>
+    <article className='dish-card'>
         <img className='dish-image' src={imageUrl} alt={title} />
         <div className='details'>
           <h4>{price}$</h4>
