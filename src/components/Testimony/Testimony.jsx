@@ -1,6 +1,6 @@
 import React from 'react';
 import { Rating } from '@mui/material';
-import './Testimony.css';
+import './testimony.css';
 
 
 export default function Testimony({ value, opinion, name, date }) {

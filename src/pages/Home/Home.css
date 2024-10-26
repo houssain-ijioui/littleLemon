@@ -16,7 +16,6 @@ h2 {
 
 h3 {
     color: #3FA2F6;
-    margin-top: 60px;
 }
 
 #sd-head {
@@ -28,6 +27,9 @@ p {
     line-height: 26px;
 }
 
+section {
+    margin: 20px 0 20px 0;
+}
 
 .specials {
     display: grid;

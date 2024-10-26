@@ -1,5 +1,5 @@
 import React from 'react';
-import './DishCard.css';
+import './dishCard.css';
 
 
 export default function DishCard({ title, price, imageUrl }) {

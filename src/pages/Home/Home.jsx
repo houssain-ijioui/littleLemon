@@ -1,9 +1,9 @@
 import React from 'react';
-import Main from "../../components/Main/Main";
-import Nav from '../../components/Nav/Nav';
-import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
-import './Home.css';
+import Main from "../../components/main/Main";
+import Nav from '../../components/nav/Nav';
+import Footer from "../../components/footer/Footer";
+import Header from "../../components/header/Header";
+import './home.css';
 
 
 
@@ -13,6 +13,7 @@ export default function Home() {
         <Nav />
         <Header />
         <Main />
+        <Footer />
     </>
   )
 }
