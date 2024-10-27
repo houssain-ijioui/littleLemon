@@ -1,0 +1,25 @@
+.ps-button button {
+    background-color: #fff;
+    color: #0091AE;
+    border: #0091AE 1px solid;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0 8px 0 8px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+
+.ps-button button:hover {
+    background-color: #0091AE;
+    color: #fff;
+}
+
+
+
+.ps-button span {
+    color: #5c8394;
+    font-weight: 800;
+    font-size: 22px;
+}
