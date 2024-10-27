@@ -1,0 +1,26 @@
+[
+    {
+        "opinion": "Little Lemon has transformed the way I think about cooking! The recipes are easy to follow, and the flavors are out of this world. I love how diverse the menu is. Highly recommend!",
+        "value": 3,
+        "name": "Sarah Johnson",
+        "date": "12-09-2024"
+    },
+    {
+        "opinion": "I tried the Little Lemon app for the first time last week, and I was blown away! The dishes are not only delicious but also healthy. It's now my go-to for meal inspiration!",
+        "value": 4.5,
+        "name": "Michael Thompson",
+        "date": "22-11-2024"
+    },
+    {
+        "opinion": "As someone who struggles with meal planning, Little Lemon has been a lifesaver! The app is user-friendly, and I appreciate the variety of dishes. My family loves every meal I've made!",
+        "value": 5,
+        "name": "Emily Davis",
+        "date": "30-05-2024"
+    },
+    {
+        "opinion": "I never thought I could cook so well until I started using Little Lemon. The step-by-step instructions make everything easy, and my friends are always impressed with the meals I prepare. Thank you for this fantastic app",
+        "value": 5,
+        "name": "James Smith",
+        "date": "27-12-2024"
+    }
+]
