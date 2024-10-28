@@ -29,7 +29,6 @@ const Main = () => {
           return (<Testimony value={testimony.value} opinion={testimony.opinion} name={testimony.name} date={testimony.date} />)
         })}
       </section>
-
     </main>
   )
 }

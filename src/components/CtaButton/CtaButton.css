@@ -1,4 +1,4 @@
-.cta-button {
+.cta-button, .primary-button {
     color: #0091AE;
     text-decoration: none;
     font-weight: 700;
@@ -10,10 +10,11 @@
         background-color 0.5s ease-in-out,
         color 0.5s ease-in-out;
     text-align: center;
+    background-color: #fff;
 }
 
 
-.cta-button:hover {
+.cta-button:hover, .primary-button:hover {
     background-color: #0091AE;
     color: white;
 }

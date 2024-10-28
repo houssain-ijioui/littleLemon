@@ -4,7 +4,8 @@ import Footer from "../../components/footer/Footer"
 import DateInput from "../../components/dateInput/DateInput"
 import PsButton from "../../components/psButton/PsButton";
 import './booking.css';
-import CtaButton from "../../components/ctaButton/CtaButton";
+import PrimaryButton from "../../components/primaryButton/PrimaryButton";
+
 
 export default function Booking() {
   return (
@@ -22,7 +23,7 @@ export default function Booking() {
           <div>
             <fieldset>
               <label>Date</label>
-              <DateInput />
+              <DateInput  />
             </fieldset>
             <fieldset id="lastField">
               <label>Party Size</label>
@@ -31,15 +32,15 @@ export default function Booking() {
           </div>
           <fieldset className="contact">
             <label htmlFor=''>Name</label>
-            <input type='text' />
+            <input type='text' required />
 
             <label htmlFor=''>Phone Number</label>
-            <input type='tel' />
+            <input type='tel' required />
 
             <label htmlFor=''>Email</label>
-            <input type='email' />
+            <input type='email' required />
 
-            <CtaButton text={"Submit"} />
+            <PrimaryButton type={"submit"} text={"Submit"} />
           </fieldset>
         </form>
       </section>

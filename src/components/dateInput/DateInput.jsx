@@ -7,7 +7,9 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 export default function DateInput() {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker />
+      <DatePicker slotProps={{ textField: {
+        required: true
+      } }} />
     </LocalizationProvider>
   )
 }

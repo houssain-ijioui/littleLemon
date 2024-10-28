@@ -8,3 +8,4 @@ export default function CtaButton({ text }) {
     <Link className='cta-button' to={'/booking'}>{text}</Link>
   )
 }
+
