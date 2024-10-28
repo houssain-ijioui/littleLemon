@@ -1,31 +1,19 @@
 import React from 'react';
-import { useState } from 'react';
 import './psButton.css';
+import { useDispatch, useSelector } from "react-redux";
+import { increasePS, decreasePS } from '../../features/partySize/partySizeSlice';
 
 
 export default function PsButton() {
 
-    const [ size, setSize ] = useState(0);
-
-    const increase = () => {
-        setSize((prev) => {
-            if (prev === 10) return 10
-            else { return prev + 1 }
-        })
-    }
-
-    const decrease = () => {
-        setSize((prev) => {
-            if (prev === 0) return 0
-            else { return prev - 1 }
-        })
-    }
+    const partySize = useSelector((state) => state.partySize.partySize);
+    const dispatch = useDispatch();
 
     return (
         <div className='ps-button'>
-            <button onClick={increase}>+</button>
-            <span>{size}</span>
-            <button onClick={decrease}>-</button>
+            <button onClick={() => dispatch(increasePS())} type='button'>+</button>
+            <span>{partySize}</span>
+            <button onClick={() => dispatch(decreasePS())} type='button'>-</button>
         </div>
     )
 }
