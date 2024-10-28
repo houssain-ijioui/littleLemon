@@ -5,9 +5,32 @@ import DateInput from "../../components/dateInput/DateInput"
 import PsButton from "../../components/psButton/PsButton";
 import './booking.css';
 import PrimaryButton from "../../components/primaryButton/PrimaryButton";
+import { useSelector } from "react-redux";
+import toast from 'react-hot-toast';
+
 
 
 export default function Booking() {
+
+  const [ name, setName ] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const partySize = useSelector((state) => state.partySize.partySize);
+  const date = useSelector(state => state.dateField.dateField)
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    if (name === "" || phone === "" || email === "" || partySize === 0 || date === null ) {
+      toast("Fill out all Information!", { duration: 1900 })
+    }
+    else {
+      toast("Reservation Confirmed", { duration: 1900 });
+      window.location.reload();
+    }
+  }
+
+
+
   return (
     <>
       <Nav />
@@ -32,15 +55,15 @@ export default function Booking() {
           </div>
           <fieldset className="contact">
             <label htmlFor=''>Name</label>
-            <input type='text' required />
+            <input value={name} onChange={(e) => setName(e.target.value)} type='text' required />
 
             <label htmlFor=''>Phone Number</label>
-            <input type='tel' required />
+            <input value={phone} onChange={(e) => setPhone(e.target.value)} type='tel' required />
 
             <label htmlFor=''>Email</label>
-            <input type='email' required />
+            <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' required />
 
-            <PrimaryButton type={"submit"} text={"Submit"} />
+            <PrimaryButton onClick={submitForm} type={"submit"} text={"Submit"} />
           </fieldset>
         </form>
       </section>

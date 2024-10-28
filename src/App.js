@@ -8,22 +8,26 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Provider } from 'react-redux';
 import store from './features/store';
+import { Toaster  } from 'react-hot-toast';
 
 
 function App() {
   return (
-    <Provider store={store}>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <Router>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/booking' element={<Booking />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/policy' element={<Policy />} />
-          </Routes>
-        </Router>
-      </LocalizationProvider>
-    </Provider>
+    <>
+      <Toaster  />
+      <Provider store={store}>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <Router>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/booking' element={<Booking />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/policy' element={<Policy />} />
+            </Routes>
+          </Router>
+        </LocalizationProvider>
+      </Provider>
+    </>
   );
 }
 

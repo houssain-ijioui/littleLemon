@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import CtaButton from '../ctaButton/CtaButton';
 import DishCard from '../dishCard/DishCard';
 import Testimony from '../testimony/Testimony';
