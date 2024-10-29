@@ -21,11 +21,12 @@
     flex-direction: column;
 }
 
-.contact input {
+.contact input, select {
     border: none;
     margin: 0 0 30px 0;
     height: 30px;
     background-color: aliceblue;
+    font-size: 16px;
 }
 
 

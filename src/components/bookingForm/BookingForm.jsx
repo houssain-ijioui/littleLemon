@@ -9,15 +9,17 @@ import toast from 'react-hot-toast';
 
 export default function BookingForm() {
 
-    const [name, setName] = useState("");
-    const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
+    const [duration, setDuration] = useState("");
+    const [occasion, setOccasion] = useState("");
+
     const partySize = useSelector((state) => state.partySize.partySize);
     const date = useSelector(state => state.dateField.dateField)
 
+
     const submitForm = (e) => {
         e.preventDefault();
-        if (name === "" || phone === "" || email === "" || partySize === 0 || date === null) {
+        if (duration === "" || occasion === "" || email === "" || partySize === 0 || date === null) {
             toast("Fill out all Information!", { duration: 1900 })
         }
         else {
@@ -40,11 +42,21 @@ export default function BookingForm() {
                 </fieldset>
             </div>
             <fieldset className="contact">
-                <label htmlFor=''>Occasion</label>
-                <input value={name} onChange={(e) => setName(e.target.value)} type='text' required />
+                <label>Occasion</label>
+                <select value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+                    <option value="" disabled>Select an option</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Birthday">Birthday</option>
+                </select>
+                <select value={duration} onChange={(e) => setDuration(e.target.value)}>
+                    <option value="" disabled>Select an option</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                </select>
 
-                <label htmlFor=''>Phone Number</label>
-                <input value={phone} onChange={(e) => setPhone(e.target.value)} type='tel' required />
 
                 <label htmlFor=''>Email</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' required />
