@@ -1,32 +1,46 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DateInput from '../dateInput/DateInput';
 import PsButton from '../psButton/PsButton';
 import PrimaryButton from '../primaryButton/PrimaryButton';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
+import { updateTimes } from '../../features/times/timesSlice';
+import { resetPS } from '../../features/partySize/partySizeSlice';
+import { resetDate } from '../../features/dateField/dateFieldSlice';
 
 
 
 export default function BookingForm() {
 
+    const dispatch = useDispatch();
+
     const [email, setEmail] = useState("");
-    const [duration, setDuration] = useState("");
     const [occasion, setOccasion] = useState("");
+    const [selectedTime, setSelectedTime ] = useState("");
+    const [selectedDate, setSelectedDate] = useState(null);
 
     const partySize = useSelector((state) => state.partySize.partySize);
     const date = useSelector(state => state.dateField.dateField)
+    const times = useSelector(state => state.times.times)
 
 
     const submitForm = (e) => {
         e.preventDefault();
-        if (duration === "" || occasion === "" || email === "" || partySize === 0 || date === null) {
+        if (selectedTime === "" || occasion === "" || email === "" || partySize === 0 || selectedDate === null) {
             toast("Fill out all Information!", { duration: 1900 })
         }
         else {
+            dispatch(updateTimes(selectedTime));
+            dispatch(resetPS());
+            dispatch(resetDate());
+            setSelectedDate(null);
+            setSelectedTime("");
+            setEmail("");
+            setOccasion("");
             toast("Reservation Confirmed", { duration: 1900 });
-            window.location.reload();
         }
     }
+
 
 
     return (
@@ -34,7 +48,7 @@ export default function BookingForm() {
             <div>
                 <fieldset>
                     <label>Date</label>
-                    <DateInput />
+                    <DateInput selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
                 </fieldset>
                 <fieldset id="lastField">
                     <label>Party Size</label>
@@ -48,13 +62,11 @@ export default function BookingForm() {
                     <option value="Anniversary">Anniversary</option>
                     <option value="Birthday">Birthday</option>
                 </select>
-                <select value={duration} onChange={(e) => setDuration(e.target.value)}>
-                    <option value="" disabled>Select an option</option>
-                    <option value="17:00">17:00</option>
-                    <option value="18:00">18:00</option>
-                    <option value="19:00">19:00</option>
-                    <option value="20:00">20:00</option>
-                    <option value="21:00">21:00</option>
+                <select value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)}>
+                    <option value="" disabled >Select an option</option>
+                    {times.map((item, key) => {
+                        return (<option key={key} value={item}>{item}</option>)
+                    })}
                 </select>
 
 

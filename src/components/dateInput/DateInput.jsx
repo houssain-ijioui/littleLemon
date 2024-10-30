@@ -2,26 +2,26 @@ import React, { useEffect, useState } from 'react';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeDate } from '../../features/dateField/dateFieldSlice';
 
 
-export default function DateInput() {
+export default function DateInput({ selectedDate, setSelectedDate }) {
 
-  const [date, setDate] = useState(null);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(changeDate({
-      year: date?.$y,
-      month: date?.$M + 1,
-      day: date?.$D
+      year: selectedDate?.$y,
+      month: selectedDate?.$M + 1,
+      day: selectedDate?.$D
     }))
-  }, [date])
+  }, [selectedDate])
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker value={date} onChange={(newValue) => setDate(newValue)} slotProps={{
+      <DatePicker value={selectedDate} onChange={(newValue) => setSelectedDate(newValue)} slotProps={{
         textField: {
           required: true
         }

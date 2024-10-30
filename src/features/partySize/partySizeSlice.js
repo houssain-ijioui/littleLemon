@@ -10,6 +10,9 @@ const partySizeSlice = createSlice({
     name: "partySize",
     initialState,
     reducers: {
+        resetPS: (state) => {
+            state.partySize = 0
+        },
         increasePS: (state) => {
             state.partySize = state.partySize < 10 ? state.partySize + 1 : state.partySize;
         },
@@ -20,5 +23,5 @@ const partySizeSlice = createSlice({
 })
 
 
-export const { increasePS, decreasePS } = partySizeSlice.actions;
+export const { increasePS, decreasePS, resetPS } = partySizeSlice.actions;
 export default partySizeSlice.reducer;

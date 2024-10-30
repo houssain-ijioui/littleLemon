@@ -10,6 +10,9 @@ const dateFieldSlice = createSlice({
     name: "dateField",
     initialState,
     reducers: {
+        resetDate: (state) => {
+            state.dateField = null
+        },
         changeDate: (state, action) => {
             state.dateField = action.payload
         }
@@ -17,5 +20,5 @@ const dateFieldSlice = createSlice({
 })
 
 
-export const { changeDate } = dateFieldSlice.actions;
+export const { changeDate, resetDate } = dateFieldSlice.actions;
 export default dateFieldSlice.reducer;
