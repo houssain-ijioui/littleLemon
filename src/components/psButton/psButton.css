@@ -1,3 +1,7 @@
+.ps-button {
+    display: flex;
+    justify-content: space-around;
+}
 .ps-button button {
     background-color: #fff;
     color: #0091AE;
@@ -6,7 +10,7 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
-    margin: 0 8px 0 8px;
+    margin: 0 8px 0 0;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
@@ -18,8 +22,11 @@
 
 
 
-.ps-button span {
+.ps-button #party-size {
     color: #5c8394;
     font-weight: 800;
     font-size: 22px;
+    width: 90px;
+    border: none;
+    text-align: center;
 }

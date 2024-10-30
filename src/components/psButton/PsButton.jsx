@@ -12,7 +12,7 @@ export default function PsButton() {
     return (
         <div className='ps-button'>
             <button onClick={() => dispatch(increasePS())} type='button'>+</button>
-            <span>{partySize}</span>
+            <input id="party-size" type="number" value={partySize} readOnly />
             <button onClick={() => dispatch(decreasePS())} type='button'>-</button>
         </div>
     )

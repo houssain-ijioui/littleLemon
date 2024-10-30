@@ -51,18 +51,19 @@ export default function BookingForm() {
                     <DateInput selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
                 </fieldset>
                 <fieldset id="lastField">
-                    <label>Party Size</label>
+                    <label htmlFor='party-size'>Party Size</label>
                     <PsButton />
                 </fieldset>
             </div>
             <fieldset className="contact">
-                <label>Occasion</label>
-                <select value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+                <label htmlFor='occasion'>Occasion</label>
+                <select id='occasion' value={occasion} onChange={(e) => setOccasion(e.target.value)}>
                     <option value="" disabled>Select an option</option>
                     <option value="Anniversary">Anniversary</option>
                     <option value="Birthday">Birthday</option>
                 </select>
-                <select value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)}>
+                <label htmlFor="time">Time</label>
+                <select id='time' value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)}>
                     <option value="" disabled >Select an option</option>
                     {times.map((item, key) => {
                         return (<option key={key} value={item}>{item}</option>)
@@ -70,8 +71,8 @@ export default function BookingForm() {
                 </select>
 
 
-                <label htmlFor=''>Email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' required />
+                <label htmlFor='email'>Email</label>
+                <input id='email' value={email} onChange={(e) => setEmail(e.target.value)} type='email' required />
 
                 <PrimaryButton onClick={submitForm} type={"submit"} text={"Book"} />
             </fieldset>
