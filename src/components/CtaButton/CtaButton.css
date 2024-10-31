@@ -21,7 +21,7 @@
     background-color: #F1E9A8;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 760px) {
     .cta-button {
         margin-left: 2rem;
     }

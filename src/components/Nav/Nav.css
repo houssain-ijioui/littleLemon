@@ -44,6 +44,7 @@ nav .link a {
     background-color: #fff;
     padding: 8px 15px;
     border-radius: 8px;
+    transition: border 0.3s ease-in-out;
 }
 
 nav .link a:hover,#toggle-menu:hover {
@@ -87,5 +88,11 @@ nav .link a:hover,#toggle-menu:hover {
         display: block;
         padding: 0 10px;
         margin-right: 5px;
+    }
+}
+
+@media (max-width: 422) {
+    nav {
+        width: 100%;
     }
 }
