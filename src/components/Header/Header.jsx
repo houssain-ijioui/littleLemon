@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './header.css';
+import CtaButton from '../ctaButton/CtaButton';
+
+
 
 const Header = () => {
   return (
     <header>
-      <h1 id='ft-head'>Discover Little Lemon: Your Favourite Restaurant!</h1>
-      <h2 id='sd-head'>Exceptional Plates at Unbeatable Prices!</h2>
+      <div className="overlay"></div>
+      <h1>Unforgettable Moroccan Culinary Experience</h1>
+      <p>Dive into a world of exquisite flavors and elevate your senses with our Moroccan culinary delights at Little Lemon.</p>
+      <CtaButton text={"Reserve Your Place Now!"} />
     </header>
   )
 }

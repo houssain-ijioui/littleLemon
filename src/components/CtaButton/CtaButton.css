@@ -1,20 +1,28 @@
-.cta-button, .primary-button {
-    color: #0091AE;
+.cta-button {
+    color: #111827;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 19px;
-    padding: 12px;
-    border: 1px solid #0091AE;
+    padding: 10px 5px;
+    border: 2px solid #111827;
     border-radius: 12px;
-    transition: 
-        background-color 0.5s ease-in-out,
-        color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
     text-align: center;
-    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    margin-left: 8rem;
+    top: 20px;
 }
 
+.cta-button:hover {
+    background-color: #F1E9A8;
+}
 
-.cta-button:hover, .primary-button:hover {
-    background-color: #0091AE;
-    color: white;
+@media (max-width: 620px) {
+    .cta-button {
+        margin-left: 2rem;
+    }
 }
