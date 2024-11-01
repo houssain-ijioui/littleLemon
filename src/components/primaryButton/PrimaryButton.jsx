@@ -1,6 +1,5 @@
 import React from 'react';
-import '../ctaButton/ctaButton.css';
-
+import './primaryButton.css';
 
 export default function PrimaryButton({ text, type, onClick }) {
   return (

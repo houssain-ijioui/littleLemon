@@ -1,7 +1,6 @@
 .policy-content {
     background-color: #EFDA9A;
     padding: 3rem 2rem;
-    text-align: center;
 }
 
 .policy-content h1 {
@@ -18,5 +17,5 @@
     font-weight: 500;
     font-style: normal;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.6;
 }

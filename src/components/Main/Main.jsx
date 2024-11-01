@@ -21,9 +21,6 @@ const Main = () => {
               <Service imageUrl={service.imageUrl} title={service.title} text={service.text} />
             )
           })}
-          <article>
-            <h3></h3>
-          </article>
         </div>
       </section>
       <section className='testimonies'>

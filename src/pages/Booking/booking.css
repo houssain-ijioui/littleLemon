@@ -1,3 +1,29 @@
+.booking-page {
+    background-color: #EFDA9A;
+    padding: 2rem 0;
+}
+
+.booking-page h1 {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+.booking-page p {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.booking-page header {
+    text-align: center;
+    padding: 2rem 0 0 0;
+}
+
 .booking-form {
     display: flex;
     flex-direction: column;
@@ -25,7 +51,7 @@
     border: none;
     margin: 0 0 30px 0;
     height: 30px;
-    background-color: aliceblue;
+    background-color: #A6D6AE;
     font-size: 16px;
 }
 

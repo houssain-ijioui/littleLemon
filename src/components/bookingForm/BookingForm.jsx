@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import DateInput from '../dateInput/DateInput';
 import PsButton from '../psButton/PsButton';
 import PrimaryButton from '../primaryButton/PrimaryButton';
