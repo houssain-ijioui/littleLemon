@@ -12,30 +12,6 @@
     font-size: 40px;
 }
 
-.first-section img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.first-section h3 {
-    font-family: "Luckiest Guy", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-    margin-bottom: 10px;
-    padding: 0 8px;
-}
-
-.first-section p {
-    font-family: "Quicksand", ans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 18px;
-    padding: 0 8px;
-}
 
 .first-section .cards {
     display: flex;
@@ -45,17 +21,35 @@
     gap: 30px;
 }
 
-.first-section article {
-    height: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    transition: transform 0.4s ease-in-out;
+.testimonies {
+    background-color: #F1E9A8;
+    padding: 4rem 2rem;
 }
 
-.first-section article:hover {
-    border: 2px solid #705DE5;
-    transform: scale(1.1);
+.testimonies h1 {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
 }
+
+.testimonies .description {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    margin-top: 20px;
+    width: 90%;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
 
 
 @media (max-width: 620px) {
@@ -67,4 +61,9 @@
         display: flex;
         flex-direction: column;
     }
+
+    .testimonials {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+

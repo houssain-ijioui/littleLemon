@@ -1,0 +1,37 @@
+.service img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding: 0 8px;
+}
+
+.service p {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    padding: 0 8px;
+}
+
+
+.first-section article {
+    height: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.first-section article:hover {
+    border: 2px solid #705DE5;
+    transform: scale(1.1);
+}
