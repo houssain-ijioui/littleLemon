@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
-import About from './pages/about/About';
-import Policy from './pages/policy/Policy';
 import Booking from './pages/booking/Booking';
+import Faq from './pages/faq/Faq';
+import Policy from './pages/policy/Policy'
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Provider } from 'react-redux';
@@ -21,7 +21,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/booking' element={<Booking />} />
-              <Route path='/about' element={<About />} />
+              <Route path='/faq' element={<Faq />} />
               <Route path='/policy' element={<Policy />} />
             </Routes>
           </Router>

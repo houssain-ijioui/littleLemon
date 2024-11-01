@@ -21,7 +21,7 @@ const Nav = () => {
         <li className='link'><Link to={"/"}>Home</Link></li>
         <li className='link'><Link to={"/booking"}>Booking</Link></li>
         <li className='link'><Link to={"/policy"}>Policy</Link></li>
-        <li className='link' id='about-link'><Link to={"/about"}>About Us</Link></li>
+        <li className='link' id='about-link'><Link to={"/faq"}>FAQ</Link></li>
       </ul>
     </nav>
   )

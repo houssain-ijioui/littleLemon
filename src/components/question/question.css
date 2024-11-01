@@ -1,0 +1,15 @@
+.question-card h2 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.question-card h3 {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}

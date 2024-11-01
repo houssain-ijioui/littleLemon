@@ -6,7 +6,7 @@ import CtaButton from '../ctaButton/CtaButton';
 
 const Header = () => {
   return (
-    <header>
+    <header className='header-top'>
       <div className="overlay"></div>
       <h1>Unforgettable Moroccan Culinary Experience</h1>
       <p>Dive into a world of exquisite flavors and elevate your senses with our Moroccan culinary delights at Little Lemon.</p>
