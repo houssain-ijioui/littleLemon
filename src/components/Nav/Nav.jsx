@@ -9,9 +9,6 @@ const Nav = () => {
 
   const toggleMenu = () => { setShowToggle(!showToggle) }
 
-  useEffect(() => {
-    console.log(showToggle);
-  }, [toggleMenu])
 
   return (
     <nav>

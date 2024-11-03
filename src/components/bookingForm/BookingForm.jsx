@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DateInput from '../dateInput/DateInput';
 import PsButton from '../psButton/PsButton';
 import PrimaryButton from '../primaryButton/PrimaryButton';
 import { useSelector, useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
-import { updateTimes } from '../../features/times/timesSlice';
+import { initialTimes, updateTimes } from '../../features/times/timesSlice';
 import { resetPS } from '../../features/partySize/partySizeSlice';
 import { resetDate } from '../../features/dateField/dateFieldSlice';
 import './bookingForm.css';
+import { fetchAPI, submitAPI } from '../../utils/api';
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function BookingForm() {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [occasion, setOccasion] = useState("");
@@ -21,9 +24,21 @@ export default function BookingForm() {
     const [selectedDate, setSelectedDate] = useState(null);
 
     const partySize = useSelector((state) => state.partySize.partySize);
-    const date = useSelector(state => state.dateField.dateField)
     const times = useSelector(state => state.times.times)
 
+
+
+    async function initialiseTimes() {
+      const today = new Date()
+      const availableTimes = fetchAPI(today)
+      dispatch(initialTimes(availableTimes))
+    }
+
+
+
+    useEffect(() => {
+        initialiseTimes()
+    }, []);
 
     const submitForm = (e) => {
         e.preventDefault();
@@ -31,14 +46,24 @@ export default function BookingForm() {
             toast("Fill out all Information!", { duration: 1900 })
         }
         else {
-            dispatch(updateTimes(selectedTime));
-            dispatch(resetPS());
-            dispatch(resetDate());
-            setSelectedDate(null);
-            setSelectedTime("");
-            setEmail("");
-            setOccasion("");
-            toast("Reservation Confirmed", { duration: 1900 });
+            const response = submitAPI({
+              email,
+              occasion,
+              selectedDate,
+              selectedTime,
+              partySize,
+            })
+            if (response) {
+                dispatch(updateTimes(selectedTime))
+                dispatch(resetPS())
+                dispatch(resetDate())
+                setSelectedDate(null)
+                setSelectedTime("")
+                setEmail("")
+                setOccasion("")
+                toast("Reservation Confirmed", { duration: 1900 })
+                // navigate("/")
+            }
         }
     }
 

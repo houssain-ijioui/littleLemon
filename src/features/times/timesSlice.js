@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    times: ["17:00", "18:00", "19:00", "20:00", "21:00",]
+    times: []
 }
 
 
@@ -10,6 +10,9 @@ const timesSlice = createSlice({
     name: "times",
     initialState,
     reducers: {
+        initialTimes: (state, action) => {
+            state.times = action.payload
+        },
         updateTimes: (state, action) => {
             const indexOfItem = state.times.indexOf(action.payload)
             if (indexOfItem !== -1) {
@@ -20,5 +23,5 @@ const timesSlice = createSlice({
 })
 
 
-export const { updateTimes } = timesSlice.actions;
+export const { initialTimes, updateTimes } = timesSlice.actions;
 export default timesSlice.reducer;
