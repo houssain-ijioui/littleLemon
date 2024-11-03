@@ -30,6 +30,7 @@ export default function DateInput({ selectedDate, setSelectedDate }) {
           textField: {
             required: true,
           },
+          
         }}
       />
     </LocalizationProvider>

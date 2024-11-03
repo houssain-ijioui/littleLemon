@@ -7,6 +7,7 @@ import toast from 'react-hot-toast';
 import { updateTimes } from '../../features/times/timesSlice';
 import { resetPS } from '../../features/partySize/partySizeSlice';
 import { resetDate } from '../../features/dateField/dateFieldSlice';
+import './bookingForm.css';
 
 
 
@@ -45,8 +46,8 @@ export default function BookingForm() {
 
     return (
         <form action='#' className='booking-form'>
-            <div>
-                <fieldset>
+            <div className='top'>
+                <fieldset id='dateField'>
                     <label>Date</label>
                     <DateInput selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
                 </fieldset>

@@ -1,0 +1,18 @@
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.top #dateField {
+    padding: 18px 0 0 ;
+}
+
+
+@media (max-width: 600px) {
+    .booking-form .top {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}

@@ -1,7 +1,10 @@
 .ps-button {
     display: flex;
     justify-content: space-around;
+    padding: 0 0 0 6px;
 }
+
+
 .ps-button button {
     background-color: #F1E9A8;
     border: 1px solid #111827;
