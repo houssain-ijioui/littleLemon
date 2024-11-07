@@ -16,7 +16,6 @@ import { useNavigate } from 'react-router-dom';
 export default function BookingForm() {
 
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [occasion, setOccasion] = useState("");
@@ -43,7 +42,7 @@ export default function BookingForm() {
     const submitForm = (e) => {
         e.preventDefault();
         if (selectedTime === "" || occasion === "" || email === "" || partySize === 0 || selectedDate === null) {
-            toast("Fill out all Information!", { duration: 1900 })
+            toast("Please fill out all Information!", { duration: 1900 })
         }
         else {
             const response = submitAPI({
@@ -73,7 +72,7 @@ export default function BookingForm() {
         <form action='#' className='booking-form'>
             <div className='top'>
                 <fieldset id='dateField'>
-                    <label>Date</label>
+                    <label htmlFor="">Date</label>
                     <DateInput selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
                 </fieldset>
                 <fieldset id="lastField">
@@ -91,7 +90,7 @@ export default function BookingForm() {
                 <label htmlFor="time">Time</label>
                 <select id='time' value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)}>
                     <option value="" disabled >Select an option</option>
-                    {times.map((item, key) => {
+                    {times?.map((item, key) => {
                         return (<option key={key} value={item}>{item}</option>)
                     })}
                 </select>
